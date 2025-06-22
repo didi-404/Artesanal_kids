@@ -1,8 +1,132 @@
-.logo{
-    width: 56px;
-    border-radius: 50%;
+:root {
+    --principal: #5C4B77;
+    --secundaria: #B145AD;
+    --azul: #6990E4;
+    --rosa_claro: #F6A2D4;
+    --white: white;
+    --black: black;
 }
 
-.center {
-    text-align: center;
+.color-ak-primary {
+    color: var(--principal);
+}
+
+.color-ak-secundary {
+    color: var(--secundaria);
+}
+
+.color-ak-pink {
+    color: var(--rosa_claro);
+}
+
+.color-ak-blue {
+    color: var(--azul);
+}
+
+nav {
+    background-color: var(--principal) !important;
+
+    .nav-link:hover {
+        color: var(--rosa_claro) !important;
+        transition: 0.2s ease-in-out;
+    }
+
+    .nav-link {
+        color: var(--white);
+    }
+
+    .container-fluid {
+
+        i,
+        a {
+            font-size: 20px;
+        }
+    }
+
+    .carrinho i {
+        font-size: 30px;
+    }
+}
+
+.carousel-item img {
+    height: 80vh;
+    width: 80vw;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.active {
+    background-color: rgba(211, 211, 211, 0.171) !important;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 5vw;
+    border-radius: 20%;
+}
+
+.section1 {
+    i {
+        font-size: 40px;
+    }
+}
+
+.footer {
+    background: var(--principal);
+    color: var(--white);
+    margin-top: auto;
+}
+
+.footer-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 20%;
+    object-fit: cover;
+}
+
+.footer-link {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    padding: 5px 0;
+}
+
+.footer-link:hover {
+    color: var(--rosa_claro);
+    text-decoration: none;
+}
+
+.social-links a {
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--rosa_claro) !important;
+}
+
+.footer-divider {
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-info i {
+    width: 20px;
+}
+
+@media (max-width: 768px) {
+    .footer .col-12 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .footer-logo {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .social-links {
+        margin-top: 1rem;
+    }
 }
