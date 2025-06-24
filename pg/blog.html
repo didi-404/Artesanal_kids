@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kids Artesanal - Sobre</title>
+  <title>Kids Artesanal - Blog</title>
   <link rel="icon" href="../img/Logo.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
@@ -34,14 +34,14 @@
               <i class="bi bi-bag-fill"></i> Produtos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="../pg/sobre.html">
+            <a class="nav-link" href="../pg/sobre.html">
               <i class="bi bi-heart-fill"></i> Sobre Nós</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../pg/galeria.html">
               <i class="bi bi-image-fill"></i> Galeria</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="../pg/blog.html">
               <i class="bi bi-chat-fill"></i> Blog</a>
           </li>
@@ -57,68 +57,46 @@
     </div>
   </nav>
 
-  <div class="container container mt-5">
-    <h2 class="text-center fw-bold mb-5 color-ak-primary">Sobre a Artesanal Kids</h2>
+  <div class="container mt-5">
+    <h2 class="blog-title color-ak-primary">Blog Artesanal Kids</h2>
+    <div class="blog-grid" id="blog">
 
-    <div class="row align-items-center mb-5">
-      <div class="col-md-6 text-center container">
-        <img src="../img/historia.jpg" alt="Nossa História" class="sobre-img" />
-      </div>
-      <div class="col-md-6">
-        <h4 class="fw-bold mb-3 color-ak-blue">Nossa História</h4>
-        <div class="" id="sobre"></div>
-        <button type="button" class="btn btn-detalhes flex-fill font-geral btn-mas" data-bs-toggle="modal"
-          data-bs-target="#staticBackdrop">
-          Ver mais
-        </button>
-      </div>
-    </div>
+      
 
-    <div class="accordion mt-5" id="faqAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
-            Como são feitas nossas peças?
-          </button>
-        </h2>
-        <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Todas as peças são confeccionadas artesanalmente por costureiras especializadas, usando tecidos de alta
-            qualidade e técnicas tradicionais.
-          </div>
+      <div class="blog-card">
+        <img src="../img/img33.webp" alt="Tendências da moda infantil 2025">
+        <div class="blog-content">
+          <div class="blog-date"><i class="bi bi-calendar-fill"></i>10 Jan 2025</div>
+          <div class="blog-title-post">Tendências da moda infantil 2025</div>
+          <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+            ut labore...</p>
+          <a href="#" class="blog-link">Ler mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="blog-card">
+        <img src="../img/img34.webp" alt="A importância do algodão orgânico">
+        <div class="blog-content">
+          <div class="blog-date"><i class="bi bi-calendar-fill"></i>05 Jan 2025</div>
+          <div class="blog-title-post">A importância do algodão orgânico</div>
+          <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+            ut labore...</p>
+          <a href="#" class="blog-link">Ler mais <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
 
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
-            Qual o prazo de entrega?
-          </button>
-        </h2>
-        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            O prazo de entrega varia de 5 a 10 dias úteis, dependendo da sua localização e disponibilidade do produto.
-          </div>
+      <div class="blog-card">
+        <img src="../img/img35.jfif" alt="Dicas de combinações para crianças">
+        <div class="blog-content">
+          <div class="blog-date"><i class="bi bi-calendar-fill"></i>01 Jan 2025</div>
+          <div class="blog-title-post">Dicas de combinações para crianças</div>
+          <p class="blog-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+            ut labore...</p>
+          <a href="#" class="blog-link">Ler mais <i class="bi bi-arrow-right"></i></a>
         </div>
       </div>
 
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
-            Vocês fazem peças sob medida?
-          </button>
-        </h2>
-        <div id="faq3" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            Sim! Oferecemos serviço de peças sob medida. Entre em contato conosco para mais informações sobre medidas
-            e
-            prazos.
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-
 
   <footer class="footer mt-5">
     <div class="container py-5">
@@ -182,25 +160,6 @@
       </div>
     </div>
   </footer>
-
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 color-ak-blue" id="staticBackdropLabel">Nossa História</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body" id="modalSobre">
-          ...
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-detalhes flex-fill font-geral btn-mas"
-            data-bs-dismiss="modal">Fechar</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"

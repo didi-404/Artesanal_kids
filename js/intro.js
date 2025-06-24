@@ -1,73 +1,91 @@
-class IntroManager {
+// classe pra gerenciar toda a intro do site
+class AnimacaoIntro {
     constructor() {
-        this.elements = {
-            introScreen: document.getElementById('introScreen'),
-            logoContainer: document.getElementById('logoContainer'),
-            enterBtn: document.getElementById('enterBtn'),
-            bgMusic: document.getElementById('bgMusic'),
-            mainContent: document.getElementById('mainContent')
+        // pego todos os elementos que vou usar na intro
+        this.elementos = {
+            telaIntro: document.getElementById('introScreen'),
+            containerLogo: document.getElementById('logoContainer'),
+            btnEntrar: document.getElementById('enterBtn'),
+            musicaFundo: document.getElementById('bgMusic'),
+            conteudoPrincipal: document.getElementById('mainContent')
         };
         
-        this.isIntroActive = true;
-        this.hasStarted = false;
+        // variáveis pra controlar o estado da intro
+        this.introAtiva = true;
+        this.jaComecou = false;
         
-        this.init();
+        // inicializo tudo
+        this.configurarEventos();
     }
 
-    init() {
-        this.elements.enterBtn.addEventListener('click', () => this.startIntro());
+    // função pra configurar os eventos
+    configurarEventos() {
+        // quando clica no botão enter, começa a intro
+        this.elementos.btnEntrar.addEventListener('click', () => this.iniciarIntro());
+        
+        // também pode apertar Enter no teclado pra começar
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' && this.isIntroActive && !this.hasStarted) {
-                this.startIntro();
+            if (e.key === 'Enter' && this.introAtiva && !this.jaComecou) {
+                this.iniciarIntro();
             }
         });
     }
 
-    async startIntro() {
-        if (this.hasStarted) return;
-        this.hasStarted = true;
+    // função que inicia toda a sequência da intro
+    async iniciarIntro() {
+        // se já começou, não faz nada
+        if (this.jaComecou) return;
+        this.jaComecou = true;
 
-        // tocar a música
+        // tento tocar a música de fundo
         try {
-            await this.elements.bgMusic.play();
+            await this.elementos.musicaFundo.play();
         } catch (error) {
             console.log('Áudio não pôde ser reproduzido automaticamente');
         }
 
-        // Logo aparece dps de mais ou menos 12 segundos
+        // depois de 12.5 segundos, mostro o logo
         setTimeout(() => {
-            this.elements.logoContainer.classList.add('show');
+            this.elementos.containerLogo.classList.add('show');
         }, 12500);
 
-        // Termina a intro e mostra o conteúdo intermediário
+        // depois de 15.5 segundos, termino a intro
         setTimeout(() => {
-            this.showMainContent();
+            this.mostrarConteudo();
         }, 15500);
     }
 
-    showMainContent() {
-        if (!this.isIntroActive) return;
+    // função que mostra o conteúdo principal e tira a intro
+    mostrarConteudo() {
+        // se a intro não tá ativa, não faz nada
+        if (!this.introAtiva) return;
         
-        // tira a tela
-        this.elements.introScreen.classList.add('fade-out');
+        // adiciono a classe pra fazer o fade out da tela da intro
+        this.elementos.telaIntro.classList.add('fade-out');
         
+        // depois de 1.2 segundos
         setTimeout(() => {
-            this.elements.introScreen.style.display = 'none';
-            this.elements.mainContent.classList.add('visible');
+            // escondo a tela da intro completamente
+            this.elementos.telaIntro.style.display = 'none';
+            // mostro o conteúdo principal
+            this.elementos.conteudoPrincipal.classList.add('visible');
+            // libero o scroll da página
             document.body.style.overflow = 'auto';
             
-            // Dps 3 segundos vai para home.html
+            // depois de mais 6.5 segundos, vou pra home
             setTimeout(() => {
-                this.goToHome();
+                this.irParaHome();
             }, 6500);
         }, 1200);
     }
 
-    goToHome() {
-        window.location.href = '../pg/home.html';
+    // função pra ir pra página home
+    irParaHome() {
+        window.location.href = 'pg/home.html';
     }
 }
 
+// quando a página carregar, crio uma nova instância da AnimacaoIntro
 document.addEventListener('DOMContentLoaded', () => {
-    new IntroManager();
+    new AnimacaoIntro();
 });

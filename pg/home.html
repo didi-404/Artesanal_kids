@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Kids Artesanal - Home</title>
+  <link rel="icon" href="../img/Logo.png" type="image/x-icon">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -37,8 +38,12 @@
               <i class="bi bi-heart-fill"></i> Sobre Nós</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../pg/gallery.html">
+            <a class="nav-link" href="../pg/galeria.html">
               <i class="bi bi-image-fill"></i> Galeria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pg/blog.html">
+              <i class="bi bi-chat-fill"></i> Blog</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../pg/contato.html">
@@ -117,6 +122,28 @@
     </div>
   </section>
 
+  <section class="section2">
+    <div class="container my-5">
+      <h3 class="text-center mb-4 color-ak-primary">Produtos em Destaque</h3>
+      <div id="carouselProdutos" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
+        <div class="carousel-inner" id="carousel-produtos">
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProdutos" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselProdutos" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <div class="text-center mt-4">
+        <a href="../pg/produtos.html" class="btn btn-detalhes font-geral btn-fem">
+          Ver Tudo <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </section>
+
   <footer class="footer mt-5">
     <div class="container py-5">
       <div class="row">
@@ -125,7 +152,8 @@
             <img src="../img/Logo.png" alt="Artesanal Kids" class="footer-logo mb-3">
             <h5 class="color-ak-primary">Artesanal Kids</h5>
           </div>
-          <p class="text-light">Moda infantil artesanal com amor e qualidade. Cada peça é única e feita especialmente para o seu pequeno.</p>
+          <p class="text-light">Moda infantil artesanal com amor e qualidade. Cada peça é única e feita especialmente
+            para o seu pequeno.</p>
           <div class="social-links">
             <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
             <a href="#" class="text-light me-3"><i class="bi bi-instagram"></i></a>
@@ -139,10 +167,11 @@
             <li><a href="#" class="footer-link"><i class="bi bi-house-fill me-2"></i>Home</a></li>
             <li><a href="../pg/produtos.html" class="footer-link"><i class="bi bi-bag-fill me-2"></i>Produtos</a></li>
             <li><a href="../pg/sobre.html" class="footer-link"><i class="bi bi-heart-fill me-2"></i>Sobre Nós</a></li>
-            <li><a href="../pg/gallery.html" class="footer-link"><i class="bi bi-image-fill me-2"></i>Galeria</a></li>
+            <li><a href="../pg/galeria.html" class="footer-link"><i class="bi bi-image-fill me-2"></i>Galeria</a></li>
+            <li><a href="../pg/blog.html" class="footer-link"><i class="bi bi-chat-fill me-2"></i>Blog</a></li>
           </ul>
         </div>
-  
+
         <div class="col-12 col-md-4 mb-4">
           <h6 class="color-ak-pink mb-3">Contato</h6>
           <div class="contact-info">
@@ -165,9 +194,9 @@
           </div>
         </div>
       </div>
-  
+
       <hr class="footer-divider my-4">
-  
+
       <div class="row">
         <div class="col-12 text-center">
           <p class="text-light mb-0">
@@ -182,6 +211,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
+  <script src="../js/dados.js"></script>
+  <script src="../js/config_dados.js"></script>
 </body>
 
 </html>
