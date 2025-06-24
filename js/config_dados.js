@@ -166,8 +166,10 @@ function produto(id) {
 function sobre() {
     let sobre = document.getElementById("sobre")
     let modalSobre = document.getElementById("modalSobre")
+    let accordionSobre = document.getElementById("accordionSobre")
     let dados = ""
     let dadosModal = ""
+    let dadosAccordion = ""
 
     for (let i = 0; i < 2; i++) {
         let texto = noticias[i]
@@ -183,8 +185,28 @@ function sobre() {
         dadosModal += `<p>${texto.resumo}</p>`
     }
 
+    // accordion
+    for (let i = 3; i < 6; i++) {
+        let texto = noticias[i]
+        dadosAccordion += `
+        <div class="accordion-item">
+        <h2 class="accordion-header" id="heading${i}">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${i}" aria-expanded="false" aria-controls="collapse${i}">
+            ${texto.titulo}
+          </button>
+        </h2>
+        <div id="collapse${i}" class="accordion-collapse collapse" aria-labelledby="heading${i}" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <p>${texto.resumo}</p>
+          </div>
+        </div>
+      </div>
+        `
+    }
+    
     sobre.innerHTML = dados
     modalSobre.innerHTML = dadosModal
+    accordionSobre.innerHTML = dadosAccordion
 }
 
 // função pra criar a galeria de fotos

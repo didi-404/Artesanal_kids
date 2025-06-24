@@ -77,7 +77,7 @@ nav .carrinho i {
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item .produto-img {
@@ -193,6 +193,18 @@ nav .carrinho i {
     color: white;
 }
 
+/* Accordion */
+.accordion-button:not(.collapsed) {
+    background-color: var(--principal) !important;
+    /* ou a cor que você quiser */
+    color: white !important;
+    border-color: var(--rosa_claro) !important;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+}
+
 /* Footer */
 .footer {
     background: var(--principal);
@@ -238,7 +250,8 @@ nav .carrinho i {
 }
 
 /* Página de contato */
-.form-box, .info-box {
+.form-box,
+.info-box {
     background-color: var(--white);
     border-radius: 10px;
     padding: 30px;
@@ -444,12 +457,12 @@ nav .carrinho i {
         text-align: center;
         margin-bottom: 2rem;
     }
-    
+
     .footer-logo {
         width: 50px;
         height: 50px;
     }
-    
+
     .social-links {
         margin-top: 1rem;
     }
